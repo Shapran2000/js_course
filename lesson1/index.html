@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<script>
+			/*=======================  1  ============================*/
+			
+			let str = "Привіт";
+			let num = 123;
+			let flag = true;
+			let txt = "true";
+			console.log(typeof (str));
+			console.log(typeof (num));
+			console.log(typeof (flag));
+			console.log(typeof (txt));
+			/*=======================  2  ============================*/
+			
+			
+			
+			
+			
+			/*=======================  3  ============================*/
+			
+			
+			let a6 = 5 % 3;
+			let a7 = 3 % 5;
+			let a8 = 5 + '3';
+			let a9 = '5' - 3;
+			let a10 = 75 + 'кг';
+			console.log(a6);
+			console.log(a7);
+			console.log(a8);
+			console.log(a9);
+			console.log(a10);
+			
+			/*=======================  4  ============================*/
+			
+			function perimeter(height, width) {
+				/*let s =(height + width) * 2;
+				return s;*/
+				return (height + width) * 2;
+			}
+			
+			console.log("Your res is " + perimeter(23, 10));
+			
+			/*=======================  5  ============================*/
+			function cylinderVolume(heightC, dC) {
+				// let v=Math.PI*heightC*((dC/2)^2);
+				// return v;
+				return Math.PI * heightC * ((dC / 2) ** 2);
+			}
+			
+			console.log("Your res is " + cylinderVolume(10, 4));
+			
+			
+			let heightC = 10;
+			let dC = 4;
+			let v = Math.PI * heightC * ((dC / 2) ** 2);
+			console.log("Your res is " + v);
+			
+			/*=======================  6  ============================*/
+			function areaOfTriangle(n, m) {
+				return Math.pow(Math.pow(n, 2) + Math.pow(m, 2), 1 / 2);
+			}
+			
+			console.log(areaOfTriangle(3, 4));
+			/*=======================  8  ============================*/
+			
+			let user = {
+				name: "Taras \n",
+				lName: "Shapran \n",
+				middleName: "Volodymyrovych \n",
+				age: 20 + "\n",
+				hobby: "playing to the piano \n"
+			}
+			/*	alert(user.name );
+				alert(user.lName );
+				alert(user.middleName );
+				alert(user.age );
+				alert(user.hobby );*/
+			/*=======================  9  ============================*/
+			
+			let str1 = "Кто";
+			let str2 = "ты";
+			let str3 = "такой";
+			let concatenation = str1 + " " + str2 + " " + str3;
+			document.write(`<h1> ${concatenation}</h1>`);
+			/*=======================  10  ============================*/
+			
+			let str4 = "20";
+			let a = 5;
+			document.write(str4 + a + "<br/>");//205- type: string
+			document.write(str4 - a + "<br/>");//15 - type: number
+			document.write(str4 * "2" + "<br/>");//40- type: number
+			document.write(str4 / 2 + "<br/>");//10- type: number
+			/*=======================  13  ============================*/
+			/*let first;
+			let b;
+			prompt(enter,[first]);*/
+			let age = prompt('Сколько тебе лет?', 100);
+			
+			alert(`Тебе ${age} лет!`); // Тебе 100 лет!
+		
+		
+		
+		
+		
+		</script>
+	</body>
+</html>
