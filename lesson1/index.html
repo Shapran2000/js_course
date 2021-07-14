@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+
 		<title>Title</title>
 	</head>
 	<body>
@@ -97,16 +98,48 @@
 			document.write(str4 * "2" + "<br/>");//40- type: number
 			document.write(str4 / 2 + "<br/>");//10- type: number
 			/*=======================  13  ============================*/
-			/*let first;
-			let b;
-			prompt(enter,[first]);*/
-			let age = prompt('Сколько тебе лет?', 100);
 			
-			alert(`Тебе ${age} лет!`); // Тебе 100 лет!
-		
-		
-		
-		
+			// let number1 = prompt('введіть 1 число', 0);
+			// let number2 = prompt('введіть 2 число', 0);
+			// let results=  +number1 + +number2;
+			// alert(`Ваш резутьтат: ${results}`);
+			
+			
+			/*=======================  14  ============================*/
+			// let name = prompt("Введіть ваше ім'я:");
+			// let surname = prompt("Введіть ваше прізвище:");
+			// let age = prompt("Введіть ваш вік:");
+			// alert(` Доброго вечера ${name} ${surname}, мои поздравления что вам ${age} !!!`)
+			//
+			//=====================
+			//======ДОП============
+			//=====================
+			
+			
+			/*=======================  1  ============================*/
+			let number1 = prompt('Enter first number');
+			let number2 = prompt('Enter second number');
+			let number3 = prompt('Enter third number');
+			
+			if (number1 <= number2 && number1 <= number3) {
+				if (number2 < number3) {
+					console.log(number1, number2, number3);
+				} else {
+					console.log(number1, number3, number2);
+				}
+			} else if (number2 <= number1 && number2 <= number3) {
+				if (number1 < number3) {
+					console.log(number2, number1, number3);
+				} else {
+					console.log(number2, number3, number1);
+				}
+			} else if (number3 <= number1 && number3 <= number2) {
+				if (number2 < number1) {
+					console.log(number3, number2, number1);
+				} else {
+					console.log(number3, number1, number2);
+				}
+			}
 		
 		</script>
 	</body>
