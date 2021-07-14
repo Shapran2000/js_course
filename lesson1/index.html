@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-
+		
 		<title>Title</title>
 	</head>
 	<body>
@@ -117,29 +117,81 @@
 			
 			
 			/*=======================  1  ============================*/
-			let number1 = prompt('Enter first number');
-			let number2 = prompt('Enter second number');
-			let number3 = prompt('Enter third number');
 			
-			if (number1 <= number2 && number1 <= number3) {
-				if (number2 < number3) {
-					console.log(number1, number2, number3);
+			
+			// let number1 = prompt('Enter first number');
+			// let number2 = prompt('Enter second number');
+			// let number3 = prompt('Enter third number');
+			
+			// if (number1 <= number2 && number1 <= number3) {
+			// 	if (number2 < number3) {
+			// 		console.log(number1, number2, number3);
+			// 	} else {
+			// 		console.log(number1, number3, number2);
+			// 	}
+			// } else if (number2 <= number1 && number2 <= number3) {
+			// 	if (number1 < number3) {
+			// 		console.log(number2, number1, number3);
+			// 	} else {
+			// 		console.log(number2, number3, number1);
+			// 	}
+			// } else if (number3 <= number1 && number3 <= number2) {
+			// 	if (number2 < number1) {
+			// 		console.log(number3, number2, number1);
+			// 	} else {
+			// 		console.log(number3, number1, number2);
+			// 	}
+			// }
+			/*=======================  2  ============================*/
+			
+			// let trafficLights= prompt("Введіть колір світлофора");
+			// switch (trafficLights){
+			// 	case 'зеленый' :
+			// 		console.log('иди');
+			// 		break;
+			// 	case 'желтый' :
+			// 		console.log('подожди');
+			// 		break;
+			// 	case 'красный' :
+			// 		console.log('стой');
+			// 		break;
+			// 	case 'в аварийном режиме' :
+			// 		console.log('делай что хочешь');
+			// 		break;
+			// }
+			
+			
+			/*=======================  2  ============================*/
+			let trafficLights = prompt("Введіть колір світлофора");
+			let isRoadClear = confirm("Чи є машини на дорозі ?");
+			
+			if (trafficLights === "зеленый") {
+				if (!isRoadClear) {
+					console.log("иди");
 				} else {
-					console.log(number1, number3, number2);
-				}
-			} else if (number2 <= number1 && number2 <= number3) {
-				if (number1 < number3) {
-					console.log(number2, number1, number3);
-				} else {
-					console.log(number2, number3, number1);
-				}
-			} else if (number3 <= number1 && number3 <= number2) {
-				if (number2 < number1) {
-					console.log(number3, number2, number1);
-				} else {
-					console.log(number3, number1, number2);
+					console.log("подожди пока нарушители проедут");
 				}
 			}
+			if (trafficLights === "желтый") {
+				if (isRoadClear) {
+					console.log("жди");
+				} else {
+					console.log("все рано жди");
+				}
+			}
+			if (trafficLights === "красный") {
+				if (!isRoadClear) {
+					console.log("стой все рано");
+				} else {
+					console.log("стой и жди");
+				}
+			}
+			if (trafficLights === "в аварийном режиме") {
+				
+				console.log("делай что хочешь");
+				
+			}
+		
 		
 		</script>
 	</body>
