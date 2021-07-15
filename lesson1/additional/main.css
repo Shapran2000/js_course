@@ -1,0 +1,26 @@
+.product-card img{
+    width: 300px;
+}
+.product-card{
+    background: silver;
+    display: flex;
+    justify-content: center
+}
+.product-title{
+    text-align: center;
+    color: teal;
+    margin: 0;
+}
+.simpson-info h2{
+    text-align: center;
+    color: teal;
+}
+.simpson-info p{
+    text-align:justify ;
+    background: azure;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
