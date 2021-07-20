@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.post-card{
+    width: 18%;
+    background: teal;
+    color: gold;
+    margin: 10px;
+    padding: 3px;
+
+}
+.post-card h3{
+    text-align: center;
+}.post-card p{
+     text-align: justify;
+}
