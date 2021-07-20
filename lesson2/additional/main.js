@@ -181,14 +181,22 @@ let usersWithCities=[];
 for (let j = 0; j < usersWithId.length; j++) {
     for (let k = 0; k < citiesWithId.length; k++) {
         if(usersWithId[j].id==citiesWithId[k].user_id){
-            usersWithId[j].addres=citiesWithId[k];
-            usersWithCities[j]= usersWithId[j];
 
+            usersWithCities[j]= usersWithId[j];
+            usersWithCities[j].addres=citiesWithId[k];
         }
 
     }
 
 }
+// Але в мене зміниіся також usersWithId , то так має бути ?
+// {id: 1, name: "vasya", age: 31, status: false, addres: {…}}
+// addres: {user_id: 1, country: "Ukraine", city: "Ternopil"}
+// age: 31
+// id: 1
+// name: "vasya"
+// status: false
+// __proto__: Object
 for (const usersWithCity of usersWithCities) {
     console.log(usersWithCity);
 }

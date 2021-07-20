@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    background: aliceblue;
+}
+.users-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-block {
+    width: 40%;
+    margin: 40px 70px;
+    background: teal;
+    border-radius: 10%;
+}
+.user-block h2 , h3 , p {
+    text-align: center;
+}
+.address-block{
+    color: white;
+}
+
