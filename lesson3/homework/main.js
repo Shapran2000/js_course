@@ -15,7 +15,7 @@ function AreaOfCylinder(r,h){
 }
 
 console.log( `- створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);`)
-function foo(arr){
+function foo(){
     let small=arr[0];
     let big=arr[0];
     for (const arrElement of arr) {

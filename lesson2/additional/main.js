@@ -148,12 +148,9 @@ console.log('Створити масив з будь якими значення
 let array=[1,'11',true,12,'qqq','qqq',5,false,42,'sdsd'];
 let newArray1=[];
 
-for (let j = 0 ,  i = 0; j < array.length; j++) {
-
-    const arrayElement = array[j];
-    if(Number.isInteger(arrayElement ) ){
-        newArray1[i] = arrayElement;
-        i++;
+for (const arr of array) {
+    if(Number.isInteger(arr ) ){
+        newArray1.push(arr);
     }
 }
 for (const newArrayElement of newArray1) {
