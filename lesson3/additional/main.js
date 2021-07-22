@@ -82,10 +82,17 @@ let n1 = '    Harry       Potter      ';
 let n2 = '    Ron       Whisley      ';
 let n3 = '    Hermione       Granger      ';
 function validation(str){
-    let res1= str.trim();
-    return res1.replace(/\s+/g, ' ');
+    let res1 = str.split(" ");
+    for (const res1Element of res1) {
+        if(res1Element.length>1){
+            console.log(res1Element +"=====");
+        }
+    }
+    console.log(res1);
+return str;
 }
-
+let res1 = n1.split(" ");
+console.log(res1);
 console.log(validation(n1));
 console.log(validation(n2));
 console.log(validation(n3));
