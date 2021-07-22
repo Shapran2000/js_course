@@ -107,12 +107,22 @@ class Cinderella{
 }
 class Prince{
 
-    constructor(name, age ,shoe) {
+    constructor(name, age ,footSize) {
         this.name = name;
         this.age = age;
-        this.shoe = shoe;
+        this.footSize = footSize;
+    }
+    findCinderella(cinderellas){
+        for (const cinderella of cinderellas) {
+            if(cinderella.footSize===this.footSize){
+                return cinderella.name;
+            }
+        }
+
+
     }
 }
+
 let cinderellas=[new Cinderella("Name1",19,36),
     new Cinderella("Name2",20,37),
     new Cinderella("Name3",18,36.5),
@@ -123,11 +133,14 @@ let cinderellas=[new Cinderella("Name1",19,36),
     new Cinderella("Name8",23,37),
     new Cinderella("Name9",19,37),
     new Cinderella("Name10",18,35)];
-let prince = new Prince("Name",21,{footSize:36 , color:"black"});
-let newCinderellas=   cinderellas.find(function (cinderella) {
-    return  cinderella.footSize===prince.shoe.footSize;
+let prince = new Prince("Name",21,36 );
+
+//Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+let foundCinderellas=   cinderellas.find(function (cinderella) {
+    return  cinderella.footSize===prince.footSize;
 })
-console.log(newCinderellas);
+console.log(foundCinderellas)
+console.log(prince.findCinderella(cinderellas));
 
 
 
