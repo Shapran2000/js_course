@@ -103,10 +103,11 @@ function formatArr(arr){
         if(arr[i]==0){
             let splice=parseInt( arr.splice(i,1));
             arr.push(splice);
+
         }
 
     }
     return arr;
 }
-let nnn =[0,1,2,3,4];
+let nnn =[0,1,0,0,2,3,4];
 console.log(formatArr(nnn));
