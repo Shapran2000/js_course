@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		
+		
+		<div class="users-box">
+		
+		</div>
+		<script>
+			fetch('https://jsonplaceholder.typicode.com/posts')
+					.then(response => response.json())
+					.then(value => {
+								let usersBox = document.getElementsByClassName("users-box")[0];
+								for (const valueElement of value) {
+									let pUser = document.createElement('p');
+									pUser.innerText=`${valueElement.id}  title: ${valueElement.title}`;
+									usersBox.append(pUser);
+								}
+								
+								
+							}
+					);
+		</script>
+	</body>
+</html>

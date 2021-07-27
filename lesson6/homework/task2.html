@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<div class="comments-box">
+		
+		<script>
+			fetch('https://jsonplaceholder.typicode.com/comments')
+					.then(response => response.json())
+					.then(value => {
+								let commentsBox = document.getElementsByClassName("comments-box")[0];
+								for (const valueElement of value) {
+									let pComment = document.createElement('p');
+									pComment.innerText=`${valueElement.id}  name: ${valueElement.name}`;
+									commentsBox.append(pComment);
+								}
+								
+								
+							}
+					);
+		</script>
+	</body>
+</html>
