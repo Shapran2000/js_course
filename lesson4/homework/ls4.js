@@ -75,11 +75,9 @@ function mapFunction(numberOfElements){
     let arr = [];
     console.log(`До перетворення :`);
     arr = randArrOfIntNew(numberOfElements);
-    arr.toString();
     let a = arr.map(function (n) {
-        return {
-            n
-        }
+        return n.toString();
+
     });
     console.log(a);
 }
