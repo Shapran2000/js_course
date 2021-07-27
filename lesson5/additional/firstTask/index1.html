@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<!--action="index2.html"-->
+		<form name="loginForm" action="index2.html" >
+			<input type="text" name="name" >
+			<input type="submit" name="submit" value="ok">
+		</form>
+		<script>
+			let form= document.forms.loginForm;
+			let name= form.name;
+			let submit= form.submit;
+			submit.onclick =function (ev) {
+				ev.preventDefault();
+				let storage=[];
+				const storageJSON=localStorage.getItem('name');
+				if(storageJSON){
+					storage = JSON.parse(storageJSON);
+				}
+				storage.push({name: name.value});
+				
+				localStorage.setItem("name",JSON.stringify( storage));
+			}
+			
+		
+		
+		
+		</script>
+	</body>
+</html>

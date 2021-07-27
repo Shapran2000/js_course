@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<script>
+			// - Створити форму з інпутом для введення ім'я, та action="index2.html".
+			// При відправці данних з форми, зберігати ім'я в localstorage, та переходити на index2.html.
+			// На index2.html виводити записане в localstorage ім'я в div
+			let names=JSON.parse(localStorage.getItem("name"));
+			console.log(names);
+			for (let name of names) {
+				
+				let itemDiv = document.createElement('div');
+				itemDiv.innerText=`name :${name.name}`;
+				document.body.appendChild(itemDiv);
+			}
+		</script>
+	</body>
+</html>
