@@ -19,6 +19,13 @@ let elementByIdRules = document.getElementById('rules');
 console.log(elementByIdRules.classList);
 //    -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна вивдоить текст елементу, інша довільний ьексь
 
+for (let fcRule of fc_rules) {
+    fcRule.onclick = function (ev) {
+        console.log(ev.target.textContent);
+        //console.log(fcRule.textContent);
+        ev.target.innerText='some text';
+    };
+}
 
 
 // -- поміняти колір тексту у всіх елементів fc_rules на червоний
@@ -26,13 +33,6 @@ let fc_rules=  document.getElementsByClassName('fc_rules');
 
 for (let fcRule of fc_rules) {
     fcRule.style.color='red';
-}
-for (let fcRule of fc_rules) {
-    fcRule.onclick = function (ev) {
-        console.log(ev.target.textContent);
-        //console.log(fcRule.textContent);
-        ev.target.innerText='some text';
-    };
 }
 
 
