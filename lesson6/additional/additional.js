@@ -11,29 +11,35 @@ fetch('https://jsonplaceholder.typicode.com/users')
             pUser.innerText = `${valueElement.id}- ${valueElement.name}`;
             userDiv.append(pUser);
             let postsBtn = document.createElement(`button`);
+            let postsBox = document.createElement("div");
+
             postsBtn.innerText = 'posts';
             postsBtn.onclick = function () {
                 fetch(`https://jsonplaceholder.typicode.com/users/${valueElement.id}/posts`)
                     .then(response => response.json())
                     .then(value => {
-                        let postsBox = document.createElement("div");
+                        postsBox.innerText='';
                         for (const valueElement of value) {
                             let pPosts = document.createElement('p');
                             pPosts.style.background="#EE82EE";
                             pPosts.style.margin=0;
+
                             pPosts.innerText = `${valueElement.id}  title: ${valueElement.title}`;
                             let commentsBtn = document.createElement(`button`);
+                            let ulElement = document.createElement('ul');
+                            ulElement.style.background='#6495ED';
+                            ulElement.style.margin=0;
+                            let divElement = document.createElement('div');
+
                             commentsBtn.innerText = 'comments';
                             commentsBtn.onclick = function () {
                                 fetch(`https://jsonplaceholder.typicode.com/posts/${valueElement.id}/comments`)
                                     .then(response => response.json())
                                     .then(comments => {
-                                        let ulElement = document.createElement('ul');
-                                        ulElement.style.background='#6495ED';
-                                        ulElement.style.margin=0;
 
-                                        let divElement = document.createElement('div');
-                                        divElement.innerHTML = "";
+
+
+                                        ulElement.innerHTML = "";
 
 
                                         for (const comment of comments) {
